@@ -1,0 +1,12 @@
+类选择器：选择具有特定类的元素。使用 . 前缀。
+document.querySelector('.card'); // 选择第一个具有类名 "card" 的元素
+ID 选择器：选择具有特定 ID 的元素。使用 # 前缀。
+document.querySelector('#uniqueElement'); // 选择 ID 为 "uniqueElement" 的元素
+标签选择器：选择特定标签的元素。
+document.querySelector('div'); // 选择第一个 <div> 元素
+属性选择器：选择具有特定属性的元素。
+document.querySelector('input[type="text"]'); // 选择第一个类型为 "text" 的 <input> 元素
+组合选择器：组合多个选择器来选择更具体的元素。
+document.querySelector('div.card'); // 选择第一个 <div> 元素且具有类名 "card"
+后代选择器：选择某个元素内的后代元素。
+document.querySelector('.container .card'); // 选择类名为 "container" 的元素内的第一个类名为 "card" 的元素
