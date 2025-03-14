@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="/submit_form" method="post">
+        <!-- Username input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        
+        <!-- Country selection -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+        <br><br>
+        
+        <!-- Gender selection -->
+         <!-- as the same "name" -->
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+        
+        <!-- Message input -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <br><br>
+        
+        <!-- File upload -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        <br><br>
+        
+        <!-- Date selection -->
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+        
+        <!-- Time selection -->
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time">
+        <br><br>
+        
+        <!-- Hidden field -->
+        <input type="hidden" id="user_id" name="user_id" value="12345">
+        
+        <!-- Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <button type="button" onclick="alert('Button clicked!')">Click Me</button>
+    </form>
+</body>
+</html>
