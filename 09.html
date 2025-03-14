@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Use a generic font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #ffffff; /* Set the background color */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-body h3 {
+            margin: 0 0 10px;
+        }
+        .card-body p {
+            margin: 0;
+        }
+        .table-container {
+            margin-top: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td { /* Add border and padding to the table */
+            border: 1px solid #ddd;
+        }
+        th, td { /* Add padding to the table cells */
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Showcase Page</h1>
+        </div>
+        <div class="content">
+            <div class="card">
+                <img src="img/IMG_3122.jpg" alt="Sample Image 1">
+                <div class="card-body">
+                    <h3>Card Title 1</h3>
+                    <p>This is a description of the first card. It contains some sample text to illustrate the layout.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/IMG_3122.jpg" alt="Sample Image 2">
+                <div class="card-body">
+                    <h3>Card Title 2</h3>
+                    <p>This is a description of the second card. It contains some sample text to illustrate the layout.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/IMG_3122.jpg" alt="Sample Image 3">
+                <div class="card-body">
+                    <h3>Card Title 3</h3>
+                    <p>This is a description of the third card. It contains some sample text to illustrate the layout.</p>
+                </div>
+            </div>
+        </div>
+        <div class="table-container">
+            <h2>Data Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Item One</td>
+                        <td>This is the description for item one.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Item Two</td>
+                        <td>This is the description for item two.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Item Three</td>
+                        <td>This is the description for item three.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <p>&copy; Company Sakura. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

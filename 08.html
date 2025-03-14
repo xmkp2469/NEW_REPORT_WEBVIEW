@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Form</title>
+    <style>
+        .submit_form input[type="text"],
+        .submit_form select{
+            padding: 10px;
+            width: 300px;
+        }   
+        .submit_form {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .h1 {
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Contact Us</h1>
-    <form action="/submit_form" method="post">
+    <form class="submit_form" action="/submit_form" method="post">
         <!-- Username input -->
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="Input name" required>
         <br><br>
         
         <!-- Country selection -->
