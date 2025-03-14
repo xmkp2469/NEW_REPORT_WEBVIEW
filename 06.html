@@ -22,13 +22,26 @@
             /* 把超链接下发的下划线去除 */
             text-decoration: none;
         }
+        p {
+            /* Set the line height */
+            line-height: 2;
+            /* Set the first line indent */
+            text-indent: 2em;
+        }
+        .content {
+            /* Set the width of the container */
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
     </style>
     <link rel="stylesheet" href="css/news.css">
 
 </head>
 <body>
-    <!-----------------------Title-------------------------->
+<!-----------------------Title-------------------------->
+<div class="content">
     <h1>New Intelegent</h1>
     <a href="http://www.cctv.com" target="_blank">CCTV</a> 
     <br>
@@ -46,11 +59,18 @@
             width/height the other will be set automatically
             % is the percentage of the size
        -->
-    <video src="videos/music.mp4" controls="controls" width="800px"></video>
+    <video src="videos/music.mp4" controls="controls" width=100%></video>
     <!-- Put a audio in -->
     <!-- <audio src="audios/music.mp3" controls="controls"></audio> -->
     <br>
+    <!--
+    make the text bold
+    1. <b> </b>
+    2. <strong> </strong>
+    3. <h1> </h1> to <h6> </h6> 
+     -->
     <p>
+        <strong>Update news:</strong>
         Today, we are excited to announce the launch of our new intelligent system that aims to revolutionize the way we interact with technology. This system is designed to be more intuitive, efficient, and user-friendly.
     </p>
     <p>
@@ -70,9 +90,8 @@
     ./ means the current folder
     ../ means the parent folder
     5. absolute path: put the picture in the folder and visit it by the absolute path
-
      -->
-    <img src = "img/IMG_3122.jpg" alt="A picture of a seniery" width="300" height="200">
-    
+    <img src = "img/IMG_3122.jpg" alt="A picture of a seniery" width=100%>
+</div>
 </body>
 </html>
