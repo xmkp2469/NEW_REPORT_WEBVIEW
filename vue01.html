@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue v-for and v-bind Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in items" :key="item.id" v-bind:title="item.title" :class="getClass(item)" @click="selectItem(item)">
+                {{ item.name }}
+            </li>
+            <!--
+            li: Create a list item for each item in the items array.
+            v-for: Loop through the items array and create a list item for each item.
+            :key: Bind the item.id to the key attribute.
+            v-bind:title: Bind the item.title to the title attribute.
+            :class: Bind the result of the getClass method to the class attribute.
+            @click: Call the selectItem method when the list item is clicked. 
+             -->
+        </ul>
+        <div v-if="selectedItem.id">
+            <h2>Selected Item</h2>
+            <p>ID: {{ selectedItem.id }}</p>
+            <p>Name: <input v-model="selectedItem.name"></p>
+            <p>Title: <input v-model="selectedItem.title"></p>
+        </div>
+    </div>
+    <!--
+    v-for: Loop through the items array and create a list item for each item.
+    :key: Bind the item.id to the key attribute.
+    v-bind:title: Bind the item.title to the title attribute.
+    :class: Bind the result of the getClass method to the class attribute.
+    @click: Call the selectItem method when the list item is clicked.
+    v-if: Show the selected item details if the selectedItem.id is truthy.
+    v-model: Bind the input value to the selectedItem.name and selectedItem.title.
+    v-on: Bind the click event to the selectItem method.
+     -->
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    { id: 1, name: 'Item 1', title: 'This is item 1' },
+                    { id: 2, name: 'Item 2', title: 'This is item 2' },
+                    { id: 3, name: 'Item 3', title: 'This is item 3' }
+                ],
+                selectedItem: {}
+            },
+            methods: {
+                selectItem(item) {
+                    this.selectedItem = item;
+                },
+                getClass(item) {
+                    return {
+                        highlight: item.id === this.selectedItem.id
+                    };
+                }
+            },
+            mounted() {
+                this.selectedItem = this.items[0];
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Example Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Axios Example Page</h1>
+    <button id="fetchDataBtn">Fetch Data</button>
+    <div id="dataContainer"></div>
+
+    <script>
+        document.getElementById('fetchDataBtn').addEventListener('click', async function() {
+            try {
+                const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
+                // Handle successful response
+                const dataContainer = document.getElementById('dataContainer');
+                dataContainer.innerHTML = `
+                    <h2>${response.data.title}</h2>
+                    <p>${response.data.body}</p>
+                `;
+            } catch (error) {
+                // Handle error response
+                console.error('Error fetching data:', error);
+            }
+        });
+    </script>
+</body>
+</html>
