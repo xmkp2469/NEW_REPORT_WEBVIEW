@@ -1,3 +1,5 @@
+ import { printlog } from './utils.js';
+ 
  // Select all card elements
  var cards = document.querySelectorAll('.card');
 
@@ -11,10 +13,12 @@
      // Add a mouseover event listener to the card
      card.addEventListener('mouseover', function() {
          card.style.backgroundColor = '#f0f0f0';
+         printlog('Mouseover event on card');
      });
 
      // Add a mouseout event listener to the card
      card.addEventListener('mouseout', function() {
          card.style.backgroundColor = '#fff';
+         printlog('Mouseout event on card');
      });
  });
